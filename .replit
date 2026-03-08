@@ -1,0 +1,9 @@
+run = "cd backend && npm start"
+entrypoint = "backend/src/index.js"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "cd backend && npm install && npm start"]
+deploymentTarget = "cloudrun"
