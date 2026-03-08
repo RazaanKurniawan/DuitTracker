@@ -5,5 +5,6 @@ entrypoint = "backend/src/index.js"
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "cd backend && npm install && npm start"]
-deploymentTarget = "cloudrun"
+build = ["sh", "-c", "cd backend && npm install"]
+run = ["sh", "-c", "cd backend && node src/index.js"]
+deploymentTarget = "autoscale"
