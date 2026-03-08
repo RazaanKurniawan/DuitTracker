@@ -91,8 +91,9 @@ export default {
         auth.setAuth(data.user, data.token);
         this.$router.push('/');
       } catch (err) {
-        this.error = err.response?.data?.error || 'Registrasi gagal, coba lagi.';
-        setTimeout(() => { this.error = ''; }, 4000);
+        console.error('Register error:', err);
+        this.error = err.response?.data?.error || err.message || 'Registrasi gagal, coba lagi.';
+        setTimeout(() => { this.error = ''; }, 8000);
       } finally {
         this.loading = false;
       }

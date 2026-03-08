@@ -1,0 +1,13 @@
+{
+  "appId": "com.duittracker.app",
+  "appName": "DuitTracker",
+  "webDir": "dist",
+  "server": {
+    "cleartext": true
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}
